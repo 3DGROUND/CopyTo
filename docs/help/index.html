@@ -20,7 +20,7 @@ h1, ul, li, blockquote, pre
 	var donateUrl = 'https://www.oplata.info/asp2/pay_wm.asp?id_d=2211507&lang=auto'
 	var downloadUrl = 'https://github.com/3DGROUND/CopyTo/archive/master.zip'
 	
-	var helpVer = '1.0.0' 
+	var helpVer = '1.1.0' 
 	var author = 'MastaMan'
 	var defaultLang = 'en' 
 		
@@ -513,13 +513,12 @@ footer {
 </div>
 <div id="menu" class="menu-toggle" onClick="toggleMenu()">
 	<ul>
-		<li> <a href="#home" class="nav-active" > 
-			{{name}}
-			</a> </li>
+		<li> <a href="#home" class="nav-active" > {{name}} </a> </li>
 		<li> <a href="#install" class="nav" >Install</a> </li>
 		<li> <a href="#uninstall" class="nav" >Uninstall</a> </li>
 		<li> <a href="#howtouse" class="nav" >How to Use</a> </li>
-		<li> <a href="#license" class="nav" >License</a> </li>
+		<li> <a href="#settings" class="nav" >Settings</a> </li>
+		<li> <a href="#faq" class="nav" >FAQ</a> </li>
 		<li> <a href="#about" class="nav" >About</a> </li>
 	</ul>
 	<div id="lang"><span onClick="setLang('ru', this)" lang="ru"> RU </span><span href="" onClick="setLang('en', this)" lang="en"> EN </span></div>
@@ -535,8 +534,7 @@ footer {
 		<img src="img/copyto.jpg" width="500" alt=""/>
 		<blockquote class="red">
 			<h1>Requirements:</h1>
-			3Ds Max 2011 and greater 
-		</blockquote>
+			3Ds Max 2011 and greater </blockquote>
 		<h1>Features:</h1>
 		<ul>
 			<li>Easy and fast installation</li>
@@ -557,11 +555,10 @@ footer {
 		Вставка объектов будет работать даже после переоткрытия 3Ds Max или перезагрузки компьютера.<br>
 		Копирование так же может происходить между различными версиями 3Ds Max.<br>
 		К примеру можно копировать объекты из 3Ds Max 2016 в версию 2013, или на оборот.<br>
- <img src="img/copyto.jpg" width="500" alt=""/>
- 		<blockquote class="red">
+		<img src="img/copyto.jpg" width="500" alt=""/>
+		<blockquote class="red">
 			<h1>Требования:</h1>
-			3Ds Max 2011 и выше 
-		</blockquote>
+			3Ds Max 2011 и выше </blockquote>
 		<h1>Возможности:</h1>
 		<ul>
 			<li>Простая и быстрая установка</li>
@@ -582,7 +579,7 @@ footer {
 		который позволяет автоматически копировать необходимые файлы,<br>
 		а также добавлять необходимые пункты в контекстное меню (QuadMenu).
 		<h1>Шаг 1</h1>
-		Запустите установщик, перетянув {{name}}.mzp</strong> в окно 3D Studio Max.<br>
+		Запустите установщик, перетянув <strong>{{name}}.mzp</strong> в окно 3D Studio Max.<br>
 		Или выполните его <strong>Scripting &rarr; Run Script</strong>.<br>
 		<img src="img/install1.png"  alt=""/>
 		<h1>Шаг 2</h1>
@@ -590,425 +587,175 @@ footer {
 		<img src="img/install2.png" alt=""/> <br>
 		Готово! <strong>{{name}}</strong> установлен!
 		<h1>Шаг 3</h1>
-		<img src="img/install3.png" width="572" height="501" alt=""/><br>
-		<strong>Register interface menus:</strong>
-		<ul>
-			<li> <strong>Tool Bar (Recommended)</strong> - установки кнопки на панель инструментов <em>(Рекомендуется)</em> </li>
-			<li> <strong>Quad Menu</strong> - установка пункта в контекстном меню </li>
-		</ul>
-		<strong>Setup options:</strong>
-		<ul>
-			<li> <strong>Install</strong> - для установки скрипта </li>
-			<li> <strong>Remove</strong> - для удаления скрипта </li>
-		</ul>
-		Нажмите <strong>Next</strong><br>
-		<h1>Шаг 4</h1>
-		<img src="img/install4.png" width="572" height="501" alt=""/><br>
-		Во время процесса установки вам будет необходимо подтвердить копирование файлов от имени Администратора, нажав кнопку <strong>Yes</strong>!<br>
-		<blockquote class="red">
-			<h1>Важно!</h1>
-			Обязательно подтвердите действие нажатием <strong>Yes</strong>, иначе процесс установки завершится некорректно! </blockquote>
-		<img src="img/install5.png" width="572" height="501" alt=""/> <br>
-		После успешного окончания установки вы увидите сообщение.<br>
-		<img src="img/install6.png" width="572" height="501" alt=""/> <br>
-		Дополнительные опции:
-		<ul>
-			<li> <strong>Run Script</strong> - запустить скрипт </li>
-			<li> <strong>About</strong> - информация об установщике </li>
-			<li> <strong>Help</strong> - открыть данную справку </li>
-		</ul>
-		Нажмите <strong>Finish</strong>, готово! Скрипт установлен.<br>
-		<blockquote>
-			<h1>Обратите внимание!</h1>
-			В зависимости от опций, которые были выбраны при установке, в интерфейсе 3D Studio Max появятся кнопки! </blockquote>
-		<img src="img/install7.png" width="474" height="199" alt=""/><br>
-		Кнопка в ToolBar.<br>
-		<img src="img/install8.png" width="277" height="514" alt=""/><br>
-		Кнопка в QuadMenu. </div>
+		Проверьте или у вас создались необходимые пункты в Quad Menu: <strong>CopyTo</strong> и <strong>PasteFrom</strong>.<br>
+		<img src="img/install3.png" alt=""/> <br>
+		Если у вас не создались данные пункты меню, прочитайте раздел FAQ. </div>
 	
 	<!-- EN -->
 	
-	<div class="item" id="install" lang="en" title="Install"> In the version of <strong>{{fullname}}</strong> used Universal Installer,<br>
+	<div class="item" id="install" lang="en" title="Install"> In the <strong>{{fullname}}</strong> used Universal Installer,<br>
 		which allows you to automatically copy necessary files,<br>
-		and add the buttons to the
-		Tool Bar and QuadMenu.
+		and add the buttons to the Tool Bar and QuadMenu.).
 		<h1>Step 1</h1>
-		Run the installer, just Drag&Drop <strong>PruneScene.mzp</strong> in to 3D Studio Max window.<br>
+		Run the installer, just Drag&Drop <strong>{{name}}.mzp</strong> in to 3D Studio Max window.<br>
 		Or execute from <strong>Scripting &rarr; Run Script</strong>.<br>
-		<img src="img/install1.png" width="561" height="448" alt=""/>
+		<img src="img/install1.png"  alt=""/>
 		<h1>Step 2</h1>
 		After run the installer you can see the next window.<br>
-		<img src="img/install2.png" width="572" height="501" alt=""/> <br>
-		Follow the instructions:
-		<ul>
-			<li> Read the license text </li>
-			<li> Agree with license <strong>I accept the term in the license agreement</strong> </li>
-			<li> Press the <strong>Next</strong> </li>
-		</ul>
+		<img src="img/install2.png" alt=""/> <br>
+		Done! <strong>{{name}}</strong> has been installed!
 		<h1>Step 3</h1>
-		<img src="img/install3.png" width="572" height="501" alt=""/><br>
-		<strong>Register interface menus:</strong>
-		<ul>
-			<li> <strong>Tool Bar (Recommended)</strong> - install Tool Bar buttons <em>(Recommended)</em> </li>
-			<li> <strong>Quad Menu</strong> - install as item in QuadMenu </li>
-		</ul>
-		<strong>Setup options:</strong>
-		<ul>
-			<li> <strong>Install</strong> - for install script </li>
-			<li> <strong>Remove</strong> - for remove script </li>
-		</ul>
-		Press the <strong>Next</strong><br>
-		<h1>Step 4</h1>
-		<img src="img/install4.png" width="572" height="501" alt=""/><br>
-		During the installation process you will be required to confirm the copying of files with the Administrator rights, by clicking <strong>Yes</strong>!<br>
-		<blockquote class="red">
-			<h1>Important!</h1>
-			Be sure to confirm the action by pressing <strong>Yes</strong>, otherwise the installation will be failed! </blockquote>
-		<img src="img/install5.png" width="572" height="501" alt=""/> <br>
-		After a successful installation is finished, you will see a message.<br>
-		<img src="img/install6.png" width="572" height="501" alt=""/> <br>
-		Additional options:
-		<ul>
-			<li> <strong>Run Script</strong> - run the script </li>
-			<li> <strong>About</strong> - information about Installer </li>
-			<li> <strong>Help</strong> - open this help </li>
-		</ul>
-		Press the <strong>Finish</strong>, done! Script installed.<br>
-		<blockquote>
-			<h1>Note</h1>
-			Depending on the options that were selected during installation in the 3D Studio Max interface buttons will appear! </blockquote>
-		<img src="img/install7.png" width="474" height="199" alt=""/><br>
-		Button in the ToolBar.<br>
-		<img src="img/install8.png" width="277" height="514" alt=""/><br>
-		Button in the QuadMenu. </div>
+		Check whether created the necessary items in the Quad Menu: <strong>CopyTo</strong> and <strong>PasteFrom</strong>.<br>
+		<img src="img/install3.png" alt=""/> <br>
+		If menu items not created please read the FAQ section. </div>
 	<!--------------------------------------------------------------------------------------------------> 
 	<!-- UNINSTALL --> 
 	<!-- EN -->
-	<div class="item" id="uninstall" lang="en"  title="Uninstall"> For remove the <strong><script>echo(scriptFullname)</script></strong> you must do the following: <br>
+	<div class="item" id="uninstall" lang="en"  title="Uninstall"> <br>
+		For remove the <strong>{{fullname}}</strong> you must do the following: <br>
 		<h1>Step 1</h1>
-		Run the installer, just Drag&Drop <strong>PruneScene.mzp</strong> in to 3D Studio Max window.
-		Or execute from <strong>Scripting &rarr; Run Script</strong>.<br>
-		<img src="img/install1.png" width="561" height="448" alt=""/><br>
+		Open menu <strong>Сustomize &rarr; Customize User Interface</strong>.<br>
+		<img src="img/uninstall1.png" alt=""/><br>
 		<h1>Step 2</h1>
-		Agree with license <strong>I accept the term in the license agreement</strong>.<br>
-		Press the <strong>Next</strong>.
+		Open tab <strong>Quads</strong>.<br>
+		<img src="img/uninstall2.png" alt=""/>
 		<h1>Step 3</h1>
-		In <strong>Setup Options</strong> set the <strong>Remove</strong> value.<br>
-		<img src="img/unistall1.png" width="531" height="452" alt=""/><br>
-		Press the <strong>Next</strong>.
-		<h1>Step 4</h1>
-		<img src="img/install5.png" width="572" height="501" alt=""/><br>
-		During the removal process you will be required to confirm the removing the files with Administrator rights, by clicking <strong>Yes</strong>!
-		<blockquote class="red">
-			<h1>Important!</h1>
-			Be sure to confirm the action by pressing <strong>Yes</strong>, otherwise the uninstall will be failed! </blockquote>
-		After successful completion of the removal, you will see a message.<br>
-		<img src="img/unistall2.png" width="531" height="452" alt=""/><br>
-		The script is completely removed from your computer as well as deleted Prune Scene buttons of ToolBar and QuadMenu!</div>
+		<img src="img/uninstall3.png" alt=""/> <br>
+		Find the <strong>Copy To</strong> и <strong>Paste From</strong> items and delete them,<br>
+		just press right mouse button and choose the <strong>Delete Menu Item</strong>. </div>
 	<!-- RU -->
-	<div class="item" id="uninstall" lang="ru"  title="Удаление"> Для удаления <strong><script>echo(scriptFullname)</script></strong> вам необходимо выполнить следующие действия: <br>
+	<div class="item" id="uninstall" lang="ru"  title="Удаление"> Для удаления <strong>{{fullname}}</strong> вам необходимо выполнить следующие действия: <br>
 		<h1>Шаг 1</h1>
-		Запустите установщик, перетянув <strong>PruneScene.mzp</strong> в окно 3D Studio Max.<br>
-		Или выполните его <strong>Scripting &rarr; Run Script</strong>.<br>
-		<img src="img/install1.png" width="561" height="448" alt=""/><br>
+		Перейдите в  меню <strong>Сustomize &rarr; Customize User Interface</strong>.<br>
+		<img src="img/uninstall1.png" alt=""/><br>
 		<h1>Шаг 2</h1>
-		Согласитесь с лицензией <strong>I accept the term in the license agreement</strong>.<br>
-		Нажмите <strong>Next</strong>.
+		В открывшемся окне перейдите во вкладку <strong>Quads</strong>.<br>
+		<img src="img/uninstall2.png" alt=""/>
 		<h1>Шаг 3</h1>
-		В <strong>Setup Options</strong> установите переключатель на значение <strong>Remove</strong>.<br>
-		<img src="img/unistall1.png" width="531" height="452" alt=""/><br>
-		Нажмите <strong>Next</strong>.
-		<h1>Шаг 4</h1>
-		<img src="img/install5.png" width="572" height="501" alt=""/><br>
-		Во время процесса удаления вам будет необходимо подтвердить действие удаления файлов от имени Администратора, нажав кнопку <strong>Yes</strong>!
-		<blockquote class="red">
-			<h1>Важно!</h1>
-			Обязательно подтвердите действие нажатием <strong>Yes</strong>, иначе процесс удаления завершится некорректно! </blockquote>
-		После успешного окончания удаления вы увидите сообщение.<br>
-		<img src="img/unistall2.png" width="531" height="452" alt=""/><br>
-		Скрипт полностью удален с вашего компьютера, также удалены кнопки <script>echo(scriptName)</script> из ToolBar и QuadMenu! </div>
+		<img src="img/uninstall3.png" alt=""/> <br>
+		Найдите в активном списке меню пункты <strong>Copy To</strong> и <strong>Paste From</strong> и удалите их,<br>
+		вызвав контекстное меню затем <strong>Delete Menu Item</strong>. </div>
 	
 	<!--------------------------------------------------------------------------------------------------> 
 	<!-- HOW TO USE --> 
 	<!-- RU -->
-	<div class="item" id="howtouse" lang="ru"  title="Как пользоваться"> Запустите скрипт из ToolBar или QuadMenu <em>(в зависимости от настроек при установке скрипта)</em>.<br>
-		<img src="img/how_to_use1.png" width="306" height="448" alt=""/><br>
-		Отметьте необходимые пункты для каждого типа очистки сцены, которые вы считаете нужными.<br>
-		<blockquote class="red">
-			<h1>Предупреждение!</h1>
-			<strong>Настоятельно рекомендуется перед использованием <script>echo(scriptName)</script> сохранить и сделать бэкап сцены!</strong><br>
-			<strong>После очистки, действия скрипта невозможно будет отменить!</strong><br>
-			<strong>Мы рекомендуем внимательно ознакомиться с информацией в данном разделе!</strong> </blockquote>
-		После чего нажмите кнопку <strong>Start</strong>.<br>
-		<blockquote>
-			<h1>Примечание!</h1>
-			Все настройки выбранных типов очистки сохраняются после закрытия 3D Studio Max. </blockquote>
-		<img src="img/PruneScene.png" width="292" height="441" alt=""/><br>
-		Через некоторое время, после окончания процесса, напротив каждого типа очистки вы увидите цветной статус:
-		<pre><span class="status-red">CLEARED</span> - найден и удален мусор для данного типа очистки.<br>
-<span class="statud-green">NOT FOUND</span> - мусор для данного типа очистки не был найден.<br>
-<span class="status-grey">DISABLED</span> - данная опция была отключена.
-</pre>
-		Более подробно о каждом типе очистки читайте ниже.<br>
-		<h1>Track Note</h1>
-		Удаляет так называемые Note Tracks, - это служебная информация об анимационых ключах.
-		Note Tracks появляются при Merge, Import, X-Ref моделей или же автоматически и может значительно увеличивать размер сцены.
-		</pre>
-		<h1>Garbage</h1>
-		Удаляет Local Garbage Collection, - который со временем накапливается в сцене.<br>
-		При уменьшении виртуальной памяти, он очищается автоматически, но до этого времени мусор будет накапливаться в сцене и увеличить ее размер.<br>
-		Эта опция поможет очистить Garbage collection немедленно!
-		<h1>Memory</h1>
-		Очищает Undo Buffer, - историю последних действий.<br>
-		А также удаляет Bitmap Cache, - кэш растровых изображений.
-		<blockquote>
-			<h1>Примечание!</h1>
-			После использования этой опции, у вас могут перестать отображаться текстуры во вьюпорте! </blockquote>
-		<h1>Reactor Collision</h1>
-		Эта опция актуальна для старых версий 3D Studio Max.
-		<h1>Anim Layers</h1>
-		Удаляет анимационные слои, которые увеличивают размер сцены. Данные слои могут создаваться автоматически, даже если у вас статическая сцена, без анимации.
-		<h1>Missing Objects</h1>
-		Удаляет объекты созданные внешними плагинами, которые не подключены и объекты, которые не корректно были импортированы в сцену.<br>
-		Эта опция также удаляет пустые объекты.
-		<h1>Missing Bitmaps</h1>
-		Удаляет пути для несуществующих текстур. Эта опция помогает избавиться от ошибки <strong>Missing External Files</strong> при открытии сцены.
-		<blockquote class="red">
-			<h1>Предупреждение!</h1>
-			Будьте внимательны, если вы перенесли сцену или создали новую и не успели присвоить пути текстур через <strong>Utilites &rarr; Bitmap/Phonometric Paths</strong>, вы можете сбросить все пути текстур! </blockquote>
-		<h1>Empty Layers</h1>
-		Удаляет слои, в которых нет объектов.<br>
-		Иногда при импорте чертежей из AutoCAD или Merge моделей из 3ddd.ru/3dsky.org в сцене могут создаваться нежелательные пустые слои. Эта опция поможет удалить их.
-		<h1>Anim Keys</h1>
-		Удаляет все анимационные ключи.
-		<blockquote class="red">
-			<h1>Предупреждение!</h1>
-			Если у вас в сцене содержится нужная анимация, отключите эту опцию! Иначе вся анимация будет удалена! </blockquote>
-		<h1>Particle View (Invalid Objects)</h1>
-		Удаляет пустые объекты с названием Particle_View_001...<br>
-		Если у вас в сцене нет Particle анимации, вы можете смело использовать эту опцию. </div>
+	<div class="item" id="howtouse" lang="ru"  title="Как пользоваться">
+		<h1>Шаг 1</h1>
+		Выберите объект или несколько объектов.
+		<h1>Шаг 2</h1>
+		<img src="img/howtouse1.png" alt=""/> <br>
+		Нажмите правую кнопку мышки, затем нажмите <strong>CopyTo</strong> для копирования объектов.
+		<h1>Шаг 3</h1>
+		<img src="img/howtouse2.png" alt=""/><br>
+		В этой же или новой сцене, или в другом окне 3Ds Max нажмите <strong>PasteFrom</strong>.<br>
+		Объекты будут вставлены! </div>
 	<!-- EN -->
-	<div class="item" id="howtouse" lang="en" title="How to use"> Run the script from ToolBar or QuadMenu <em>(depending on the settings during installation script)</em>.<br>
-		<img src="img/how_to_use1.png" width="306" height="448" alt=""/><br>
-		Select the required items for each type of scene cleaning that you consider necessary.<br>
-		<blockquote class="red">
-			<h1>Warning!</h1>
-			<strong>It is strongly recommended before using <script>echo(scriptName)</script> save and make a backup of the scene!</strong><br>
-			<strong>After cleaning, the action script can not be undone!</strong><br>
-			<strong>We recommend that you carefully review the information in this section!</strong> </blockquote>
-		Then press the <strong>Start</strong>.<br>
-		<blockquote>
-			<h1>Note!</h1>
-			All settings of the selected types of cleaning are saved after closing 3D Studio Max. </blockquote>
-		<img src="img/PruneScene.png" width="292" height="441" alt=""/><br>
-		After a while, after the end of the process, on the other hand each type of cleaning you will see a colored status:
-		<pre><span class="status-red">CLEARED</span> - found and deleted garbage for this type.<br>
-<span class="statud-green">NOT FOUND</span> - not found garbage for this type.<br>
-<span class="status-grey">DISABLED</span> - this option has been disabled.
-</pre>
-		For more information about each type of treatment, see below.<br>
-		<h1>Track Note</h1>
-		Note Tracks appear at Merge, Import, X-Ref models or automatically, and can significantly increase the size of the scenes.<br>
-		This option will remove them.
-		</pre>
-		<h1>Garbage</h1>
-		When memory run low garbage cleared automatically, but until that time, the garbage will accumulate in the scene and to increase its size.<br>
-		This option will help clean Garbage collection immediately!
-		<h1>Memory</h1>
-		It clears the Undo Buffer, - history of recent actions.<br>
-		Also removes the Bitmap Cache.
-		<blockquote>
-			<h1>Note!</h1>
-			After using this option, you may no longer be displayed texture in the viewport! </blockquote>
-		<h1>Reactor Collision</h1>
-		This option is relevant for older versions of 3D Studio Max.
-		<h1>Anim Layers</h1>
-		Removes animation layers that increase the size of the scene. These layers can be created automatically, even if you have a static scene, without animation.
-		<h1>Missing Objects</h1>
-		Removes objects by external plugins, which are not connected, and objects that are not correctly imported into the scene.<br>
-		This option also removes blank objects.
-		<h1>Missing Bitmaps</h1>
-		Removes the path for non-existent textures. This feature helps to avoid errors<strong> Missing External Files</strong> at the opening scene..
-		<blockquote class="red">
-			<h1>Warning!</h1>
-			Be careful if you transferred or created a new scene and did not have time to assign textures the path through <strong>Utilites &rarr; Bitmap / Phonometric Paths,</strong> you can reset all the paths textures! </blockquote>
-		<h1>Empty Layers</h1>
-		Removes layers in which no object.<br>
-		Sometimes when you import drawings from AutoCAD or Merge 3ddd.ru/3dsky.org models of the scene can be created unwanted empty layers. This option will remove them.
-		<h1>Anim Keys</h1>
-		Removes all animation keys.
-		<blockquote class="red">
-			<h1>Warning!</h1>
-			If you have in the scene contains the desired animation, uncheck this option! Otherwise, all the animation will be removed! </blockquote>
-		<h1>Particle View (Invalid Objects)</h1>
-		Removes empty objects named Particle_View_001 ...<br>
-		If you have in a scene no Particle animation, you can safely use this option. </div>
+	<div class="item" id="howtouse" lang="en"  title="How to use">
+		<h1>Step 1</h1>
+		Select an object or multiple objects.
+		<h1>Step 2</h1>
+		<img src="img/howtouse1.png" alt=""/> <br>
+		Click the right mouse button, then press <strong>CopyTo</strong> for copy objects.
+		<h1>Step 3</h1>
+		<img src="img/howtouse2.png" alt=""/><br>
+		In the same or a new scene, or in another window 3Ds Max press <strong>PasteFrom</strong>.<br>
+		Objects are inserted! </div>
 	<!--------------------------------------------------------------------------------------------------> 
-	<!-- LICENSE --> 
+	<!-- SETTINGS --> 
 	<!-- RU -->
-	<div class="item" id="license" lang="ru" title="Лицензия"> Скрипт <strong><script>echo(scriptFullname)</script></strong> распространяется по условно-бесплатной лицензии.<br>
-		<br>
-		<a class="button purchase" target="_blank">Купить ключ</a> <br>
-		<br>
-		<h1>Лицензионное соглашение:</h1>
+	<div class="item" id="settings" lang="ru" title="Настройки"> <img src="img/settings1.png" alt=""/><br>
+		Чтобы открыть меню настроек:
 		<ul>
-			<li> Данное ПО доступно в свободном доступе для любого пользователя </li>
-			<li> Вы можете абсолютно бесплатно пользоваться всеми функциями данного ПО </li>
-			<li> Вы не имеете право выдавать данное ПО за свое, изменять копирайты автора, и продавать его </li>
-			<li> Автор не несет никакой ответственности за нанесение вреда вашему компьютеру (3D Studio Max, сцене, т.д.) </li>
-			<li> Вы не имеете право передавать третьим лицам приобретенное ПО или лицензионный ключ ("Один ключ в одни руки") </li>
+			<li>Нажмите правую кнопку мышки для открытия Quad Menu</li>
+			<li>Не закрывая Quad Menu, нажмите клавишу <strong>Shift</strong></li>
+			<li>Не отпуская клавиши <strong>Shift</strong> выберите пункт меню <strong>PasteFrom</strong></li>
 		</ul>
-		<h1>Приобрев лицензию:</h1>
-		<ul>
-			<li> Вы поддерживаете автора </li>
-			<li> Вы поддерживаете продолжение разработки данного скрипта </li>
-			<li> Вы отключите окно уведомления при запуске скрипта </li>
-			<li> Вы сможете участвовать в развитии данного скрипта </li>
-		</ul>
-		<h1>Лицензионное уведомление</h1>
-		При каждом запуске скрипта, вам будет показано сообщение о приобретении лицензии.<br>
-		<img src="img/license1.png" width="285" height="397" alt=""/><br>
-		Для того чтобы закрыть это окно, нажмите кнопку <strong>1</strong>, <strong>2</strong> или <strong>3</strong>.<br>
-		Смотрите сообщение <strong>For close this window press #? button</strong>, какой кнопкой закрывается окно в этот раз.<br>
-		<br>
-		<pre>Приобретите лицензионный ключ, чтобы это окно больше не отображалось!</pre>
-		<h1>Покупка и использование лицензионного ключа</h1>
-		Для покупки лицензионного ключа нажмите на кнопку ниже:<br>
-		<a class="button purchase" target="_blank">Купить ключ</a> <br>
-		<br>
-		Или нажмите на кнопку <strong>Purchase Key</strong> в лицензионном окне:<br>
-		<img src="img/license2.png" width="285" height="397" alt=""/><br>
-		Вы будете перенаправлены на страницу оплаты. <br>
-		Выберите удобный способ оплаты, введите свой e-mail и нажмите <strong>Продолжить</strong>.
+		<strong>Auto Rename Duplicate Objects</strong> - Автоматиечки переименовывает дубликаты объектов.<br>
+		<strong>Auto Rename Mtl Duplicates</strong> - Автоматически переименовывает дубликаты материалов.<br>
+		По умолчанию эти опции отключены.
 		<blockquote>
 			<h1>Важно!</h1>
-			Заполните корректно свой e-mail. На данный e-mail будет отправлено письмо с лицензионным ключом.<br>
-		</blockquote>
-		<br>
-		<img src="img/license3.png" width="872" height="467" alt=""/><br>
-		После оплаты товара вы будете перенаправлены на страницу с лицензионным ключом.<br>
-		Также ключ вам будет выслан на указанный вами e-mail.<br>
-		<img src="img/license4.png" width="943" height="769" alt=""/><br>
-		Скопируйте лицензионный ключ, и вставьте его в форме <strong>License Key</strong> в окне уведомления лицензии скрипта.<br>
-		<br>
-		<img src="img/license6.png" width="340" height="453" alt=""/><br>
-		Если, вы все сделали правильно, уведомление закроется автоматически и больше не будет показываться.<br>
-		А в свитке <strong>About</strong>, вы увидите информацию о вашей лицензии.<br>
-		<img src="img/license5.png" width="306" height="448" alt=""/><br>
+			Мы рекомендуем оставлять значения по умолчанию! </blockquote>
 	</div>
 	<!-- EN -->
-	<div class="item" id="license" lang="en" title="License"> The <strong><script>echo(scriptFullname)</script></strong> script distributed by shareware license<br>
-		<br>
-		<a class="button purchase" target="_blank">Purchase Key</a> <br>
-		<br>
-		<h1>License agreement:</h1>
+	<div class="item" id="settings" lang="en" title="Settings"> <img src="img/settings1.png" alt=""/><br>
+		To open the settings menu:
 		<ul>
-			<li> This software is available in free access for every user </li>
-			<li> You can absolutely free to use all the features of this software </li>
-			<li> You can absolutely free to use all the features of this software </li>
-			<li> The author assumes no liability for damage to your computer (3D Studio Max, scene, etc.) </li>
-			<li> You have no right to transfer to third parties or acquired software license key </li>
+			<li>Click the right mouse button to open the Quad Menu</li>
+			<li>Without closing the Quad Menu, press <strong>Shift</strong></li>
+			<li>Without releasing the key <strong>Shift</strong> select the <strong>PasteFrom</strong></li>
 		</ul>
-		<h1>Obtain the license:</h1>
-		<ul>
-			<li> You support the author </li>
-			<li> You support the continued development of the script </li>
-			<li> You turn off the notification window when you run the script </li>
-			<li> You will be able to participate in the development of the script </li>
-		</ul>
-		<h1>License notice</h1>
-		Each time the script is run, you will see a message on purchase of the license.<br>
-		<img src="img/license1.png" width="285" height="397" alt=""/><br>
-		To close this window, press the <strong>1</strong>, <strong>2</strong> or <strong>3</strong>.<br>
-		See the message <strong>For close this window press #? button</strong>, which button closes the window this time.<br>
-		<br>
-		<pre>Purchase a license key, that the window is no longer displayed!</pre>
-		<h1>Purchase and using a license key</h1>
-		To purchase a license key, click on the button below:<br>
-		<a class="button purchase" target="_blank">Purchase Key</a> <br>
-		<br>
-		Or click on the <strong>Purchase Key</strong> button in the license window:<br>
-		<img src="img/license2.png" width="285" height="397" alt=""/><br>
-		You will be redirected to the payment page. <br>
-		Select a comfortable payment method, enter your e-mail and click the <strong>Continue</strong>.
+		<strong>Auto Rename Duplicate Objects</strong> - Automatically renames duplicate objects.<br>
+		<strong>Auto Rename Mtl Duplicates</strong> - Automatically renames duplicate materials.<br>
+		By default, these options are disabled.
 		<blockquote>
 			<h1>Important!</h1>
-			Fill correctly your e-mail. In this e-mail will be sent an message with a license key.<br>
-		</blockquote>
-		<br>
-		<img src="img/license3.png" width="872" height="467" alt=""/><br>
-		After payment you will be redirected to the page with a license key.<br>
-		Also the key will be sent to your specified e-mail.<br>
-		<img src="img/license4.png" width="943" height="769" alt=""/><br>
-		Copy the license key and paste it in the form of <strong>License Key</strong> in the notification window of the script license.<br>
-		<br>
-		<img src="img/license6.png" width="340" height="453" alt=""/><br>
-		If you did everything correctly, the notification will automatically close and no longer appear.<br>
-		In rollout <strong>About</strong>, you will see information about your license.<br>
-		<img src="img/license5.png" width="306" height="448" alt=""/><br>
+			We recommend that you use the default values! </blockquote>
+	</div>
+	<!--------------------------------------------------------------------------------------------------> 
+	<!-- FAQ --> 
+	<!-- RU -->
+	<div class="item" id="faq" lang="ru" title="FAQ">
+		<h1>Часто задаваемые вопросы:</h1>
+		<pre><h1>Принцип работы скрипта?</h1>При копировании скрипт сохраняет объекты во временный файл clipboard.max во временной папке.
+
+При вставке происходит merge объектов из clipboard.max.
+Таким образом вы можете делать вставку даже после перезапуска 3Ds Max или перезагрузки компьютера.
+
+clipboard.max сохраняется по умолчанию самой минимальной поддерживающейся версией текущего 3Ds Max,
+таким образом если произвести копирование из 2016 версии в 2012, объекты не вставятся.
+Но из 2012 версии вы сможете без проблем вставить в 2016.</pre>
+		<pre><h1>Как открыть папку, где находится временный файл clipboard.max?</h1>Нажмите правую кнопку мышки, нажмите клавишу Shift на клавиатуре, выберите пункт меню PasteFrom, в открывшемся окне нажмите "Open Temp Folder".</pre>
+		<pre><h1>Можно ли копировать из 2011 версии в версию 2016?</h1>Да.</pre>
+		<pre><h1>При копировании 2016 версии в версию 2011 ничего не происходит?</h1>3Ds Max может сохранять на 3 версии ниже. Соответственно из 2016 можно копировать только для 2013 - 2016 версий.	</pre>
+		<pre><h1>Не копирует объекты, даже в текущую версию?</h1>Попробуйте установить скрипт заново, запустив сначала 3Ds Max от имени Администратора.
+</pre>
+	</div>
+	<!-- EN --> 
+	<div class="item" id="faq" lang="en" title="FAQ">
+		<h1>Frequently Asked Questions:</h1>
+		<pre><h1>How scipt works?</h1>When you copy the object script store it in clipboard.max file in the temporary folder.
+
+When you paste, merge objects from clipboard.max.
+So you can do the past, even after restarting the 3Ds Max or restart the computer.
+
+clipboard.max saved by default the lowest supported version of the current 3Ds Max,
+so if you copy objects from the 2016 version in to 2012, the objects are not pasted.
+
+But from the 2012 version, you can paste in to 2016 without any problems.</pre>
+		<pre><h1>How to open the folder where the temporary file clipboard.max?</h1>Click the right mouse button, press the Shift key on your keyboard, select PasteFrom menu item, press "Open Temp Folder" in the open window.</pre>
+		<pre><h1>Can I copy from the 2011 version to the 2016 version?</h1>Yes.</pre>
+		<pre><h1>When copying from 2016 version to version 2011, nothing happens?</h1>3Ds Max can save 3 versions below. Accordingly, from 2016, you can copy only for the 2013 - 2016 versions.</pre>
+		<pre><h1>It does not copy objects, even in the current version?</h1>Try to re-install the script by running the first 3Ds Max by Administrator.
+</pre>
 	</div>
 	<!--------------------------------------------------------------------------------------------------> 
 	<!-- ABOUT -->
-	<div class="item" id="about" title="About"> 
-		{{name}}
-		<br>
+	<div class="item" id="about" title="About"> {{name}} <br>
 		Author: 
-		{{author}}
-		<br>
+		{{author}} <br>
 		Version: 
-		{{ver}}
-		<br>
+		{{ver}} <br>
 		<br>
 		&copy; 
 		{{year}}
 		All rights reserved.<br>
 		Universal Help by 
 		{{author}}
-		v. 
-		{{helpver}}
-		<br>
-		<br>
-		<h1>Versions history:</h1>
-		<pre><strong>v.1.0.0</strong>
-* Initial release
-
-<strong>v.2.0.0</strong>
-* Changed UI
-+ Added: Color indicates
-+ Added: Anim Layers Option
-- BugFix: Small bug fixes
-
-<strong>v.2.1.1</strong>
-+ Added: Missing Objects Option
-+ Added: Empty Layers Option
-+ Added: Save options feature
-+ Added: Tooltips
-+ Added: Corona Renderer support
-* Changed Wait indicator color
-- BugFix: Small bug fixes
-
-<strong>v2.5.0</strong>
-+ Added: Anim Keys Option
-+ Added: Particle View Option
-- BugFix: Show always cleared Memory and Garbage
-
-<strong>v2.5.2</strong>
-* Small fixes
-+ Added: Universal Installer Wizard
-+ Added: Icons
-+ Added: License Manager
-+ Added: Help
-		</pre>
+		v. {{helpver}} <br>
+				<pre>By donate the script, you will support the creator to continue the development and support this script itself.
+<a class="button" href="{{donate}}" target="_blank">Donate</a>
+</pre>
 	</div>
 </div>
 <footer>&copy; 
-	<script>echo(year)</script> 
+	{{year}}
 	Universal Help by 
-	<script>echo(author)</script> 
+	{{author}}
 	v. 
-	<script>echo(helpVer)</script> 
+	{{helpver}}
 	<br>
-	<script>echo(scriptFullname)</script> 
+	{{fullname}}
 </footer>
 </body>
 </html>
