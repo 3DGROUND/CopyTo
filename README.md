@@ -1,6 +1,6 @@
 # Copy To
 
-Official page: http://3dground.net/prod/2211507
+Official page: http://3dground.net/prod/copyto-2211507
 
 # Description
 
